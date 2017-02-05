@@ -1,4 +1,5 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
 <!-- it is a login page, no authentication protection and use anonymous template -->
 <zk>
 	<hbox self="@define(content)" vflex="1" hflex="1" align="center"
@@ -6,7 +7,7 @@
 		<vlayout>
 			<window id="loginWin" title="Login with you name"
 				apply="${mainController}" border="normal" hflex="min">
-				<vbox hflex="min" align="center">
+				<vbox hflex="min" align="center" >
 					<grid hflex="min">
 						<columns>
 							<column hflex="min" align="right" />
@@ -26,7 +27,7 @@
 						</rows>
 					</grid>
 					<label id="message" sclass="warn" value="&#160;" />
-					<button id="login" label="Login" />
+					<button id="login" label="Login" forward="onClick=onLogin" />
 
 				</vbox>
 			</window>
