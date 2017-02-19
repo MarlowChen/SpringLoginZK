@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!-- JDBC -->
+<Context path="/SpringLoginZK" docBase="SpringLoginZK" debug="5" reloadable="true" crossContext="true">
+  <Resource name="jdbc/mysqldb" username="root" password=""
+  url="jdbc:mysql://localhost:3306/Logindb"
+  auth="Container" validationQuery="SELECT * FROM userdata WHERE 1"
+  driverClassName="com.mysql.jdbc.Driver" maxActive="20"
+  timeBetweenEvictionRunsMillis="60000"
+  type="javax.sql.DataSource"/>
+  
+</Context>

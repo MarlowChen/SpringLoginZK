@@ -6,9 +6,9 @@
 		pack="center" spacing="20px">
 		<vlayout>
 			<window id="loginWin" title="Login with you name"
-				apply="${mainController}" border="normal" hflex="min">
+				apply="com.idv.madphiloshopy.controller.MainController" border="normal" hflex="min" >
 				<vbox hflex="min" align="center" >
-					<grid hflex="min">
+					<grid hflex="min"  >
 						<columns>
 							<column hflex="min" align="right" />
 							<column />
@@ -17,12 +17,12 @@
 							<row>
 								Account :
 								<textbox id="account" width="200px" 
-								value="@{controller.queryMap.password }"/>
+								value="@{controller.account }"/>
 							</row>
 							<row>
 								Password :
 								<textbox id="password" type="password"
-									width="200px" value="@{controller.queryMap.password }" />
+									width="200px" value="@{controller.password }" />
 							</row>
 						</rows>
 					</grid>
